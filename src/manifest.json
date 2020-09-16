@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "name": "esatCopy",
+  "version": "1.0.0",
+  "description": "296727088@qq.com",
+  "icons": {
+    "16": "static/img/copy.png",
+    "19": "static/img/copy.png",
+    "38": "static/img/copy.png",
+    "48": "static/img/copy.png",
+    "128": "static/img/copy.png"
+  },
+  "browser_action": {
+    "default_icon": "static/img/copy.png",
+    "default_title": "esatCopy",
+    "default_popup": "popup.html"
+  },
+  "options_page": "option.html",
+  "background": {
+    "persistent": true,
+    "scripts": ["background.main.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.main.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "declarativeContent",
+    "storage",
+    "webNavigation",
+    "tabs",
+    "notifications",
+    "http://*/",
+    "https://*/",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "web_accessible_resources": ["static/js/listen.js"]
+}

@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+tree.md
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.zip
+*.pem
+*.lock
